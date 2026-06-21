@@ -12,7 +12,7 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 
 # Bring the universe to the classroom
 
-<p class="lead">Cosmo-Edu-Lab brings modern cosmology into the high school curriculum — from dark matter to inflation — using real data to understand how the universe works.</p>
+<p class="lead">Cosmo-Edu-Lab is and educational project which brings modern cosmology into the high school curriculum — from dark matter to inflation — using real observational data to understand how the universe works.</p>
 
 <div class="hero-actions" markdown="1">
 [Explore the app]({{ '/app/' | relative_url }}){: .btn .btn-primary}
@@ -21,6 +21,8 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 </div>
 
 Modern cosmology is one of humanity's greatest intellectual achievements — yet it rarely finds its way into secondary school science. Cosmo-Edu-Lab is an open educational project making selected concepts in cosmology accessible and engaging, allowing students to connect familiar physics tools with the frontiers of science.
+
+Cosmo-Edu-Lab is also a digital platform where all actiities are integrated.
 
 - **[About the project]({{ '/about/' | relative_url }})** — what Cosmo-Edu-Lab is and why it exists.
 - **[Our approach]({{ '/approach/' | relative_url }})** — the three commitments behind the materials.
