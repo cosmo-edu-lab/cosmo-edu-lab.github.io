@@ -12,7 +12,7 @@ description: "Funding and support."
 
 ### Institutions
 
-Cosmo-Edu-Lab was born as an academic project, withing the Graduate School in Physics and Nanoscience at the University of Modena and Reggio Emilia.
+Cosmo-Edu-Lab was born as an academic project, withing the [Graduate School in Physics and Nanoscience](https://www.nano-phdschool.unimore.it) at the University of Modena and Reggio Emilia.
 
 </div>
 <div markdown="1">

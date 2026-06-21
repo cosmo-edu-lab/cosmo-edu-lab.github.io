@@ -12,7 +12,7 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 
 # Bring the universe to the classroom
 
-<p class="lead">Cosmo-Edu-Lab is and educational project which brings modern cosmology into the high school curriculum — from dark matter to inflation — using real observational data to understand how the universe works.</p>
+<p class="lead">Cosmo-Edu-Lab is and educational project which brings modern cosmology, one of humanity’s greatest intellectual achievements, into the high school curriculum using real observational data, and understand how the universe works.</p>
 
 <div class="hero-actions" markdown="1">
 [Explore the app]({{ '/app/' | relative_url }}){: .btn .btn-primary}
@@ -20,11 +20,11 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 </div>
 </div>
 
-Modern cosmology is one of humanity's greatest intellectual achievements — yet it rarely finds its way into secondary school science. Cosmo-Edu-Lab is an open educational project making selected concepts in cosmology accessible and engaging, allowing students to connect familiar physics tools with the frontiers of science.
+Cosmo-Edu-Lab is an open educational project making selected concepts in cosmology — from dark matter to inflation — accessible and engaging, allowing students to connect familiar physics tools with the frontiers of science.
 
-Cosmo-Edu-Lab is also a digital platform where all actiities are integrated.
+Cosmo-Edu-Lab is also a digital platform where all concepts are deployed in interactive activities based on real data.
 
-- **[About the project]({{ '/about/' | relative_url }})** — what Cosmo-Edu-Lab is and why it exists.
-- **[Our approach]({{ '/approach/' | relative_url }})** — the three commitments behind the materials.
-- **[The app]({{ '/app/' | relative_url }})** — download the platform and explore its features.
+- **[About the project]({{ '/about/' | relative_url }})** What Cosmo-Edu-Lab is and why it exists.
+- **[Our approach]({{ '/approach/' | relative_url }})** The commitments behind the project.
+- **[The app]({{ '/app/' | relative_url }})** Download the platform and explore its features.
 {: .grid}
