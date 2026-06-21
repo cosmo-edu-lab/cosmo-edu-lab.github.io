@@ -22,6 +22,8 @@ nav:
     url: "/app/"
   - title: "Team"
     url: "/team/"
+  - title: "Aknowledgements"
+    url: "/acknowledgements/"
   - title: "Contact"
     url: "/contact/"
 
