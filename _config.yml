@@ -1,0 +1,38 @@
+# ── Site settings ──────────────────────────────────────────────
+# Fill in url/baseurl once you know where the site will live:
+#  - User/org site (repo named <username>.github.io): url: "https://<username>.github.io", baseurl: ""
+#  - Project site (any other repo name):               url: "https://<username>.github.io", baseurl: "/<repo-name>"
+url: ""
+baseurl: ""
+
+title: "Cosmo-Edu-Lab"
+description: "Bringing modern cosmology into the high school classroom."
+github_repo: "https://github.com/cosmo-edu-lab"
+contact_email: "info@cosmo-edu-lab.org"
+license_url: "https://creativecommons.org/licenses/by/4.0/"
+license_name: "CC BY 4.0"
+
+# ── Top navigation (edit here to add/remove/reorder pages) ────
+nav:
+  - title: "About"
+    url: "/about/"
+  - title: "Approach"
+    url: "/approach/"
+  - title: "App"
+    url: "/app/"
+  - title: "Team"
+    url: "/team/"
+  - title: "Contact"
+    url: "/contact/"
+
+# ── Build settings ──────────────────────────────────────────────
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

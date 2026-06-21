@@ -1,0 +1,285 @@
+/* ────────────────────────────────────────────────────────────
+   Cosmo-Edu-Lab — base stylesheet
+   Plain, standard layout for an educational/software project site.
+   System fonts only: no external font requests, fast & simple.
+   ──────────────────────────────────────────────────────────── */
+
+:root {
+  --bg:        #ffffff;
+  --bg-alt:    #f6f8fa;
+  --border:    #d8dee4;
+  --text:      #1f2328;
+  --text-muted:#59636e;
+  --accent:    #1f5fbf;
+  --accent-dark:#163f80;
+  --radius:    6px;
+  --max-width: 880px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; }
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 1.6em 0 0.6em;
+}
+h1 { font-size: 1.9rem; margin-top: 0; }
+h2 { font-size: 1.45rem; }
+h3 { font-size: 1.15rem; }
+
+p { margin: 0 0 1em; }
+ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
+li { margin-bottom: 0.4em; }
+
+code { font-family: var(--font-mono); background: var(--bg-alt); padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.9em; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+/* ── NAV ── */
+.site-nav {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+.brand:hover { text-decoration: none; color: var(--accent); }
+
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.nav-links a:hover { color: var(--accent); text-decoration: none; }
+.nav-links a.active { color: var(--text); font-weight: 600; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: var(--text);
+  border-radius: 1px;
+}
+
+@media (max-width: 640px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0;
+    display: none;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.7rem 1.5rem; }
+}
+
+/* ── LAYOUT ── */
+.content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  min-height: 60vh;
+}
+
+.page-header { margin-bottom: 0.5rem; }
+.page-header h1 { margin-bottom: 0; }
+
+/* ── HERO (home page only) ── */
+.hero {
+  padding: 2.5rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  margin: 0 0 1rem;
+}
+.lead {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 620px;
+  margin-bottom: 1.8rem;
+}
+.hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.3rem;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: var(--bg);
+}
+.btn:hover { text-decoration: none; border-color: var(--accent); color: var(--accent); }
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+
+/* ── CARD GRID (used via {: .grid} on a list) ── */
+.grid {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.grid li {
+  background: var(--bg);
+  padding: 1.2rem 1.3rem;
+  margin: 0;
+}
+.grid li p:last-child { margin-bottom: 0; }
+.grid li strong { display: block; margin-bottom: 0.3rem; font-size: 1rem; }
+
+/* ── TWO-COLUMN LIST (used via {: .columns} on a list of links) ── */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2.5rem;
+  list-style: none;
+  padding: 0;
+}
+@media (max-width: 640px) {
+  .columns { grid-template-columns: 1fr; }
+}
+
+/* ── PANEL (used via {: .panel} on a block, e.g. a sub-section) ── */
+.panel {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.6rem;
+  margin: 1.5rem 0;
+  background: var(--bg-alt);
+}
+.panel h3:first-child { margin-top: 0; }
+
+/* ── INLINE IMAGES BESIDE TEXT (used via {: .float-left} / {: .float-right} on an image) ── */
+.float-left, .float-right {
+  max-width: 42%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 0.4rem;
+}
+.float-left  { float: left;  margin-right: 1.6rem; }
+.float-right { float: right; margin-left: 1.6rem; }
+
+/* clearfix so floated images don't bleed into the next heading/section */
+h2, h3, .grid, .columns, .panel, hr { clear: both; }
+
+@media (max-width: 640px) {
+  .float-left, .float-right {
+    float: none;
+    display: block;
+    max-width: 100%;
+    margin: 0 0 1rem;
+  }
+}
+
+/* ── PAGE IMAGE (optional, set via `image:` in front matter) ── */
+.page-image {
+  margin: 1.4rem 0 2.2rem;
+}
+.page-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.page-image figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-alt);
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.footer-inner p { margin: 0.2rem 0; }
+.footer-links a { color: var(--text-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
