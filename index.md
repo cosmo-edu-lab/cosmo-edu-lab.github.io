@@ -16,7 +16,6 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 
 <div class="hero-actions" markdown="1">
 [Explore the app]({{ '/app/' | relative_url }}){: .btn .btn-primary}
-[View on GitHub]({{ site.github_repo }}){: .btn}
 </div>
 </div>
 
