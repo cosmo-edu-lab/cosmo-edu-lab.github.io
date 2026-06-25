@@ -17,8 +17,8 @@ Designed to be used in class or independently, with content suited to high schoo
 
 <br>
 
-[Online version](https://cosmoedulab-cosmoedu.hf.space){: .btn .btn-success }
-[User Guide](https://github.com/Elyon7/Cosmo-Edu_Lab/releases/download/v1.0/User_Guide.pdf){: .btn .btn-primary }
+[Online version](https://cosmoedulab-cosmoedu.hf.space){: .btn .btn-primary }
+[User Guide](https://github.com/Elyon7/Cosmo-Edu_Lab/releases/download/v1.0/User_Guide.pdf){: .btn}
 
 ## Instructions
 
