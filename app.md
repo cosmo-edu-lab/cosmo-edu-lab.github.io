@@ -20,7 +20,8 @@ Designed to be used in class or independently, with content suited to high schoo
 ## Instructions
 
 * **1. Accessing the App**
-    * *Local version:* Download the .zip, unzip the folder, open the .exe (click "Run Anyway" if prompted by protection systems).
+    * *Local version:* Download the .zip, unzip the folder, open the .exe
+      (click "Run Anyway" if prompted by protection systems).
     * *Online version:* Click the "Online version" link above.
 * **2. Authentication**
     * Passcode: `Cosmology2026`
@@ -31,7 +32,7 @@ Designed to be used in class or independently, with content suited to high schoo
 * **Real data** — work with data from actual astronomical observations.
 * **Classroom-ready** — structured learning paths with clear objectives.
 * **Verified content** — developed and reviewed by university researchers.
-* 
+  
 ## User Guide
 For further information about the contents and usability: [User Guide](https://github.com/Elyon7/Cosmo-Edu_Lab/releases/download/v1.0/User_Guide.pdf){: .btn}
 
