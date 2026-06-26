@@ -24,7 +24,6 @@ Designed to be used in class or independently, with content suited to high schoo
       (click "Run Anyway" if prompted by protection systems).
     * *Online version:* Click the "Online version" link above.
 * **2. Authentication**
-    * Passcode: `Cosmology2026`
     * Register a new user (create an account with username and password) to login.
 
 ## Features
