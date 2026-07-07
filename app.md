@@ -11,9 +11,9 @@ Designed to be used in class or independently, with content suited to high schoo
 
 ### Download & Access
 
-[Download Windows](https://github.com/Elyon7/Cosmo-Edu_Lab/releases/download/v1.0/CosmoEduLab-windows-latest.zip){: .btn .btn-primary }
-[Download Mac](https://github.com/Elyon7/Cosmo-Edu_Lab/releases/download/v1.0/CosmoEduLab-macos-latest.zip){: .btn .btn-primary }
-[Download Linux](https://github.com/Elyon7/Cosmo-Edu_Lab/releases/download/v1.0/CosmoEduLab-ubuntu-latest.zip){: .btn .btn-primary }
+[Download Windows](https://github.com/cosmo-edu-lab/cosmo-edu-lab/releases/download/v1.0/CosmoEduLab-windows-latest.zip){: .btn .btn-primary }
+[Download Mac](https://github.com/cosmo-edu-lab/cosmo-edu-lab/releases/download/v1.0/CosmoEduLab-macos-latest.zip){: .btn .btn-primary }
+[Download Linux](https://github.com/cosmo-edu-lab/cosmo-edu-lab/releases/download/v1.0/CosmoEduLab-ubuntu-latest.zip){: .btn .btn-primary }
 [Online version](https://cosmoedulab-cosmoedu.hf.space){: .btn .btn-primary }
 
 
@@ -33,7 +33,7 @@ Designed to be used in class or independently, with content suited to high schoo
 * **Verified content** — developed and reviewed by university researchers.
   
 ## User Guide
-For further information about the contents and usability: [User Guide](https://github.com/Elyon7/Cosmo-Edu_Lab/releases/download/v1.0/User_Guide.pdf){: .btn}
+For further information about the contents and usability: [User Guide](https://github.com/cosmo-edu-lab/cosmo-edu-lab/releases/download/v1.0/User_Guide.pdf){: .btn}
 
 ## Code
-For the code and release notes: [GitHub repository](https://github.com/Elyon7/Cosmo-Edu_Lab){: .btn} 
+For the code and release notes: [GitHub repository](https://github.com/cosmo-edu-lab/cosmo-edu-lab){: .btn} 
