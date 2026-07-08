@@ -16,7 +16,9 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 * **The project** makes selected concepts in cosmology — from dark matter to inflation — accessible and engaging, allowing students to connect familiar physics tools with the frontiers of science.
 * **The digital platform** where all concepts are deployed in interactive activities based on real data.
 
-<div class="hero-actions" markdown="1">
+<div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: stretch; margin-top: 3rem;" markdown="1">
+
+<div class="hero-actions" markdown="1" style="flex: 1; min-width: 300px; margin: 0;">
 
 - **[About the project]({{ '/about/' | relative_url }})** What Cosmo-Edu-Lab is and why it exists.
 - **[Our approach]({{ '/approach/' | relative_url }})** The commitments behind the project.
@@ -24,64 +26,71 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 {: .grid}
 
 </div>
+
+<div id="cosmo-slideshow-container" style="flex: 1; min-width: 300px; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.4); aspect-ratio: 16/9; background: #0d1117; position: relative; margin: 0;">
+    <img id="cosmo-slide" src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=80" alt="Cosmology Images" style="width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 1s ease-in-out;">
 </div>
 
-<div id="cosmo-slideshow-container" style="max-width: 900px; margin: 4rem auto; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.4); aspect-ratio: 16/9; background: #0d1117; position: relative;">
-    <img id="cosmo-slide" src="" alt="Cosmology Images" style="width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out;">
+</div>
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", async function() {
-    // URL dell'API di GitHub che punta direttamente alle tue cartelle
     const apiBase = "https://api.github.com/repos/cosmo-edu-lab/cosmo-edu-lab/contents/App";
     const folders = ["cluster_img", "galaxy_img"];
-    let imageUrls = [];
+    
+    // Array di fallback: se GitHub blocca l'API per troppi tentativi, usa queste immagini sicure 
+    // anziché mostrare un riquadro nero.
+    let imageUrls = [
+        "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+    ];
 
     try {
-        // 1. Recupera la lista dei file da entrambe le cartelle
+        let fetchedUrls = [];
         for (const folder of folders) {
             const response = await fetch(`${apiBase}/${folder}`);
             if (response.ok) {
                 const data = await response.json();
-                // Filtra solo i file immagine e salva il link diretto (download_url)
                 const images = data
                     .filter(file => file.name.match(/\.(jpg|jpeg|png|gif|webp)$/i))
                     .map(file => file.download_url);
-                imageUrls = imageUrls.concat(images);
+                fetchedUrls = fetchedUrls.concat(images);
             }
         }
+        
+        // Se l'API ha successo, sostituiamo le immagini di fallback con quelle vere delle tue cartelle
+        if (fetchedUrls.length > 0) {
+            imageUrls = fetchedUrls;
+        }
 
-        if (imageUrls.length === 0) return;
-
-        // 2. Mescola l'array di immagini in modo casuale
         imageUrls.sort(() => 0.5 - Math.random());
 
         const imgElement = document.getElementById("cosmo-slide");
         let currentIndex = 0;
 
-        // 3. Funzione per cambiare immagine con effetto dissolvenza incrociata
         function changeImage() {
-            // Rimuove l'opacità (inizia il fade out)
-            imgElement.style.opacity = 0;
+            imgElement.style.opacity = 0; 
             
-            // Aspetta 1 secondo (il tempo della transizione CSS) prima di cambiare l'immagine
             setTimeout(() => {
+                imgElement.onload = null; // Pulisce eventi vecchi
                 imgElement.src = imageUrls[currentIndex];
                 
-                // Appena la nuova immagine è scaricata, la rende visibile (fade in)
-                imgElement.onload = () => {
+                // Risolve il bug del browser: se l'immagine è già scaricata, mostrala subito
+                if (imgElement.complete) {
                     imgElement.style.opacity = 1;
-                };
+                } else {
+                    imgElement.onload = () => {
+                        imgElement.style.opacity = 1;
+                    };
+                }
                 
-                // Passa all'indice successivo (o riparte da zero se è finita la lista)
                 currentIndex = (currentIndex + 1) % imageUrls.length;
             }, 1000); 
         }
 
-        // Avvia la prima immagine
-        changeImage();
-        
-        // Imposta il timer: cambia immagine ogni 4.5 secondi (3.5s visibile + 1s di transizione)
+        // Aspettiamo i primi 4.5 secondi sull'immagine iniziale prima di iniziare a ruotarle
         setInterval(changeImage, 4500);
 
     } catch (error) {
