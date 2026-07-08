@@ -14,7 +14,7 @@ Designed to be used in class or independently, with content suited to high schoo
 [Download Windows](https://github.com/cosmo-edu-lab/cosmo-edu-lab/releases/download/v1.0/CosmoEduLab-windows-latest.zip){: .btn .btn-primary }
 [Download Mac](https://github.com/cosmo-edu-lab/cosmo-edu-lab/releases/download/v1.0/CosmoEduLab-macos-latest.zip){: .btn .btn-primary }
 [Download Linux](https://github.com/cosmo-edu-lab/cosmo-edu-lab/releases/download/v1.0/CosmoEduLab-ubuntu-latest.zip){: .btn .btn-primary }
-[Online version](https://cosmoedulab-cosmoedu.hf.space){: .btn .btn-primary }
+[Online version](https://cosmo-edu-lab.onrender.com){: .btn .btn-primary }
 
 
 ## Instructions
