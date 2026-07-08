@@ -31,7 +31,7 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
         Connessione al database immagini in corso...
     </div>
 
-    <img id="cosmo-slide" src="" alt="" style="width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; position: relative; z-index: 10;">
+    <img id="cosmo-slide" src="" alt="Cosmo Edu Lab" style="width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; position: relative; z-index: 10;">
 
 </div>
 
@@ -40,29 +40,18 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 
 <script>
 document.addEventListener("DOMContentLoaded", async function() {
-    // 1. Pulisce la memoria da eventuali link rotti scaricati nei tentativi precedenti
-    sessionStorage.removeItem("cosmo_immagini_cache");
-
+    const apiBase = "https://api.github.com/repos/cosmo-edu-lab/cosmo-edu-lab/contents/App";
+    const folders = ["cluster_img", "galaxy_img"];
     let imageUrls = [];
 
-    // PIANO A: Estrazione infallibile tramite URL assoluto crudo.
-    // Invece di usare i link del sito web, prende i file dal codice sorgente puro di GitHub
-    {% for file in site.static_files %}
-        {% assign path = file.path | downcase %}
-        {% if path contains 'cluster_img' or path contains 'galaxy_img' %}
-            imageUrls.push("https://raw.githubusercontent.com/cosmo-edu-lab/cosmo-edu-lab/main{{ file.path }}");
-        {% endif %}
-    {% endfor %}
-
-    // Rimuove eventuali stringhe difettose
-    imageUrls = imageUrls.filter(url => url && url.includes("http"));
-
-    // PIANO B: API Fallback
-    if (imageUrls.length === 0) {
+    // 1. Controlla prima la cache per non esaurire le chiamate API di GitHub
+    const cachedImages = sessionStorage.getItem("cosmo_immagini_cache");
+    
+    if (cachedImages) {
+        imageUrls = JSON.parse(cachedImages);
+    } else {
+        // 2. Se non ci sono in cache, chiama le API
         try {
-            const apiBase = "https://api.github.com/repos/cosmo-edu-lab/cosmo-edu-lab/contents/App";
-            const folders = ["cluster_img", "galaxy_img"];
-            
             for (const folder of folders) {
                 const response = await fetch(`${apiBase}/${folder}`);
                 if (response.ok) {
@@ -73,48 +62,64 @@ document.addEventListener("DOMContentLoaded", async function() {
                     imageUrls = imageUrls.concat(images);
                 }
             }
+            // Salva i risultati in cache per la prossima volta
+            if (imageUrls.length > 0) {
+                sessionStorage.setItem("cosmo_immagini_cache", JSON.stringify(imageUrls));
+            }
         } catch (error) {
-            console.error("Errore API:", error);
+            console.error("Errore API di GitHub:", error);
         }
     }
 
     if (imageUrls.length === 0) {
-        document.getElementById("loading-text").innerText = "Cartelle immagini vuote o non raggiungibili.";
+        document.getElementById("loading-text").innerText = "Nessuna immagine trovata o limite API superato.";
         return;
     }
 
+    // Successo! Rimuovi il testo di caricamento e mischia le immagini
     document.getElementById("loading-text").style.display = "none";
     imageUrls.sort(() => 0.5 - Math.random());
 
     const imgElement = document.getElementById("cosmo-slide");
     let currentIndex = 0;
+    let errorCount = 0;
 
-    function changeImage() {
-        imgElement.style.opacity = 0; 
-        
-        setTimeout(() => {
-            imgElement.src = imageUrls[currentIndex];
-            
-            // Aspetta che l'immagine sia effettivamente caricata prima di renderla visibile (risolve il nero fisso)
-            imgElement.onload = () => {
-                imgElement.style.opacity = 1;
-            };
-            
-            // Se un'immagine dovesse essere corrotta, salta automaticamente alla successiva
-            imgElement.onerror = () => {
+    function showNextImage() {
+        // Assegna l'evento ONLOAD PRIMA di cambiare la sorgente per evitare la "race condition"
+        imgElement.onload = () => {
+            errorCount = 0; // Resetta gli errori se carica con successo
+            imgElement.style.opacity = 1;
+        };
+
+        // Gestione errori per evitare loop infiniti
+        imgElement.onerror = () => {
+            errorCount++;
+            if (errorCount < imageUrls.length) {
                 currentIndex = (currentIndex + 1) % imageUrls.length;
-                changeImage();
-            };
-            
+                showNextImage();
+            } else {
+                console.error("Tutte le immagini sembrano essere irraggiungibili.");
+            }
+        };
+
+        // Ora carica l'immagine
+        imgElement.src = imageUrls[currentIndex];
+    }
+
+    function triggerTransition() {
+        imgElement.style.opacity = 0; // Inizia la dissolvenza (fade-out)
+        
+        // Aspetta che l'immagine sparisca prima di caricare la successiva
+        setTimeout(() => {
             currentIndex = (currentIndex + 1) % imageUrls.length;
+            showNextImage(); 
         }, 1000); 
     }
 
-    // Inizia con la prima
-    imgElement.src = imageUrls[currentIndex];
-    imgElement.onload = () => { imgElement.style.opacity = 1; };
-    currentIndex = (currentIndex + 1) % imageUrls.length;
+    // Fai partire la prima immagine
+    showNextImage();
 
-    setInterval(changeImage, 4000);
+    // Cambia immagine ogni 4 secondi
+    setInterval(triggerTransition, 4000);
 });
 </script>
