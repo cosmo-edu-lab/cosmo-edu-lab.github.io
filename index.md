@@ -41,94 +41,62 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     
-    // Percorsi base crudi di GitHub per aggirare i limiti delle API
     const baseCluster = "https://raw.githubusercontent.com/cosmo-edu-lab/cosmo-edu-lab/main/App/cluster_img/";
     const baseGalaxy = "https://raw.githubusercontent.com/cosmo-edu-lab/cosmo-edu-lab/main/App/galaxy_img/";
 
-    // Array statico con tutti i file estratti dal repository
     const imageUrls = [
-        // Ammassi
-        baseCluster + "Abell0080.jpg",
-        baseCluster + "Abell0118.jpg",
-        baseCluster + "Abell0380.jpg",
-        baseCluster + "Abell0487.jpg",
-        baseCluster + "Abell2734.jpg",
-        baseCluster + "Abell2778.jpg",
-        baseCluster + "Abell2799.jpg",
-        baseCluster + "Abell2800.jpg",
-        baseCluster + "Abell2819.jpg",
-        baseCluster + "Abell2854.jpg",
-        baseCluster + "Abell2871.jpg",
-        baseCluster + "Abell2911.jpg",
-        baseCluster + "Abell3864.jpg",
-        baseCluster + "Abell3921.jpg",
-        baseCluster + "Abell4067.jpg",
-        baseCluster + "bullet_lensing.jpg",
-        baseCluster + "bullet_xray.jpg",
-        baseCluster + "coma_img.jpg",
-        
-        // Galassie
-        baseGalaxy + "M31.jpg",
-        baseGalaxy + "NGC0024.jpg",
-        baseGalaxy + "NGC0055.jpg",
-        baseGalaxy + "NGC0100.jpg",
-        baseGalaxy + "NGC0247.jpg",
-        baseGalaxy + "NGC0289.jpg",
-        baseGalaxy + "NGC0300.jpg",
-        baseGalaxy + "NGC0801.jpeg",
-        baseGalaxy + "NGC0891.jpg",
-        baseGalaxy + "NGC1003.jpeg",
-        baseGalaxy + "NGC1090.jpg",
-        baseGalaxy + "NGC1705.jpg",
-        baseGalaxy + "NGC2366.jpg",
-        baseGalaxy + "NGC2403.jpg",
-        baseGalaxy + "NGC2683.jpg",
-        baseGalaxy + "NGC2841.jpg",
-        baseGalaxy + "NGC3198.jpg",
-        baseGalaxy + "NGC5055.jpg",
+        baseCluster + "Abell0080.jpg", baseCluster + "Abell0118.jpg", baseCluster + "Abell0380.jpg",
+        baseCluster + "Abell0487.jpg", baseCluster + "Abell2734.jpg", baseCluster + "Abell2778.jpg",
+        baseCluster + "Abell2799.jpg", baseCluster + "Abell2800.jpg", baseCluster + "Abell2819.jpg",
+        baseCluster + "Abell2854.jpg", baseCluster + "Abell2871.jpg", baseCluster + "Abell2911.jpg",
+        baseCluster + "Abell3864.jpg", baseCluster + "Abell3921.jpg", baseCluster + "Abell4067.jpg",
+        baseCluster + "bullet_lensing.jpg", baseCluster + "bullet_xray.jpg", baseCluster + "coma_img.jpg",
+        baseGalaxy + "M31.jpg", baseGalaxy + "NGC0024.jpg", baseGalaxy + "NGC0055.jpg",
+        baseGalaxy + "NGC0100.jpg", baseGalaxy + "NGC0247.jpg", baseGalaxy + "NGC0289.jpg",
+        baseGalaxy + "NGC0300.jpg", baseGalaxy + "NGC0801.jpeg", baseGalaxy + "NGC0891.jpg",
+        baseGalaxy + "NGC1003.jpeg", baseGalaxy + "NGC1090.jpg", baseGalaxy + "NGC1705.jpg",
+        baseGalaxy + "NGC2366.jpg", baseGalaxy + "NGC2403.jpg", baseGalaxy + "NGC2683.jpg",
+        baseGalaxy + "NGC2841.jpg", baseGalaxy + "NGC3198.jpg", baseGalaxy + "NGC5055.jpg",
         baseGalaxy + "NGC6946.jpg"
     ];
 
-    // Nasconde il testo di caricamento una volta che l'array è pronto
     document.getElementById("loading-text").style.display = "none";
-    
-    // Mischia l'ordine delle immagini per avere uno slideshow sempre diverso
     imageUrls.sort(() => 0.5 - Math.random());
 
     const imgElement = document.getElementById("cosmo-slide");
     let currentIndex = 0;
+    let errorCount = 0; // Contatore salvavita
 
     function showNextImage() {
-        // Assegna l'evento ONLOAD prima di cambiare il src
         imgElement.onload = () => {
+            errorCount = 0; // Resetta gli errori se carica con successo
             imgElement.style.opacity = 1;
         };
 
-        // Se per caso un URL è sbagliato o rimosso in futuro, salta alla prossima
         imgElement.onerror = () => {
-            console.warn("Immagine non trovata:", imageUrls[currentIndex]);
-            currentIndex = (currentIndex + 1) % imageUrls.length;
-            showNextImage();
+            errorCount++;
+            // Se falliscono tutte, si ferma per non bloccare il browser
+            if (errorCount < imageUrls.length) {
+                currentIndex = (currentIndex + 1) % imageUrls.length;
+                // Una piccola pausa di 200ms prima di riprovare
+                setTimeout(showNextImage, 200); 
+            } else {
+                console.error("Nessuna immagine raggiungibile.");
+            }
         };
 
         imgElement.src = imageUrls[currentIndex];
     }
 
     function triggerTransition() {
-        // Avvia la transizione a opacità 0
         imgElement.style.opacity = 0; 
-        
-        // Aspetta che sfumi (1 secondo, in base al CSS), poi carica la successiva
         setTimeout(() => {
             currentIndex = (currentIndex + 1) % imageUrls.length;
             showNextImage(); 
         }, 1000); 
     }
 
-    // Inizializza la primissima immagine
     showNextImage();
-
-    // Loop ogni 4 secondi
     setInterval(triggerTransition, 4000);
 });
 </script>
