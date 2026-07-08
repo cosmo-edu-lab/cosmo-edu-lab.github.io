@@ -28,10 +28,10 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 <div id="cosmo-slideshow-container" style="flex: 2; min-width: 450px; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.4); aspect-ratio: 16/9; background: #0d1117; position: relative; margin: 0;">
     
     <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #64748b; font-family: monospace; font-size: 1.1rem; text-align: center; z-index: 5;">
-        Connessione al database immagini in corso...
+        Inizializzazione immagini in corso...
     </div>
 
-    <img id="cosmo-slide" src="" alt="Cosmo Edu Lab" style="width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; position: relative; z-index: 10;">
+    <img id="cosmo-slide" src="" alt="Cosmo Edu Lab Universo" style="width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; position: relative; z-index: 10;">
 
 </div>
 
@@ -39,87 +39,96 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", async function() {
-    const apiBase = "https://api.github.com/repos/cosmo-edu-lab/cosmo-edu-lab/contents/App";
-    const folders = ["cluster_img", "galaxy_img"];
-    let imageUrls = [];
-
-    // 1. Controlla prima la cache per non esaurire le chiamate API di GitHub
-    const cachedImages = sessionStorage.getItem("cosmo_immagini_cache");
+document.addEventListener("DOMContentLoaded", function() {
     
-    if (cachedImages) {
-        imageUrls = JSON.parse(cachedImages);
-    } else {
-        // 2. Se non ci sono in cache, chiama le API
-        try {
-            for (const folder of folders) {
-                const response = await fetch(`${apiBase}/${folder}`);
-                if (response.ok) {
-                    const data = await response.json();
-                    const images = data
-                        .filter(file => file.name.match(/\.(jpg|jpeg|png|gif|webp)$/i))
-                        .map(file => file.download_url);
-                    imageUrls = imageUrls.concat(images);
-                }
-            }
-            // Salva i risultati in cache per la prossima volta
-            if (imageUrls.length > 0) {
-                sessionStorage.setItem("cosmo_immagini_cache", JSON.stringify(imageUrls));
-            }
-        } catch (error) {
-            console.error("Errore API di GitHub:", error);
-        }
-    }
+    // Percorsi base crudi di GitHub per aggirare i limiti delle API
+    const baseCluster = "https://raw.githubusercontent.com/cosmo-edu-lab/cosmo-edu-lab/main/App/cluster_img/";
+    const baseGalaxy = "https://raw.githubusercontent.com/cosmo-edu-lab/cosmo-edu-lab/main/App/galaxy_img/";
 
-    if (imageUrls.length === 0) {
-        document.getElementById("loading-text").innerText = "Nessuna immagine trovata o limite API superato.";
-        return;
-    }
+    // Array statico con tutti i file estratti dal repository
+    const imageUrls = [
+        // Ammassi
+        baseCluster + "Abell0080.jpg",
+        baseCluster + "Abell0118.jpg",
+        baseCluster + "Abell0380.jpg",
+        baseCluster + "Abell0487.jpg",
+        baseCluster + "Abell2734.jpg",
+        baseCluster + "Abell2778.jpg",
+        baseCluster + "Abell2799.jpg",
+        baseCluster + "Abell2800.jpg",
+        baseCluster + "Abell2819.jpg",
+        baseCluster + "Abell2854.jpg",
+        baseCluster + "Abell2871.jpg",
+        baseCluster + "Abell2911.jpg",
+        baseCluster + "Abell3864.jpg",
+        baseCluster + "Abell3921.jpg",
+        baseCluster + "Abell4067.jpg",
+        baseCluster + "bullet_lensing.jpg",
+        baseCluster + "bullet_xray.jpg",
+        baseCluster + "coma_img.jpg",
+        
+        // Galassie
+        baseGalaxy + "M31.jpg",
+        baseGalaxy + "NGC0024.jpg",
+        baseGalaxy + "NGC0055.jpg",
+        baseGalaxy + "NGC0100.jpg",
+        baseGalaxy + "NGC0247.jpg",
+        baseGalaxy + "NGC0289.jpg",
+        baseGalaxy + "NGC0300.jpg",
+        baseGalaxy + "NGC0801.jpeg",
+        baseGalaxy + "NGC0891.jpg",
+        baseGalaxy + "NGC1003.jpeg",
+        baseGalaxy + "NGC1090.jpg",
+        baseGalaxy + "NGC1705.jpg",
+        baseGalaxy + "NGC2366.jpg",
+        baseGalaxy + "NGC2403.jpg",
+        baseGalaxy + "NGC2683.jpg",
+        baseGalaxy + "NGC2841.jpg",
+        baseGalaxy + "NGC3198.jpg",
+        baseGalaxy + "NGC5055.jpg",
+        baseGalaxy + "NGC6946.jpg"
+    ];
 
-    // Successo! Rimuovi il testo di caricamento e mischia le immagini
+    // Nasconde il testo di caricamento una volta che l'array è pronto
     document.getElementById("loading-text").style.display = "none";
+    
+    // Mischia l'ordine delle immagini per avere uno slideshow sempre diverso
     imageUrls.sort(() => 0.5 - Math.random());
 
     const imgElement = document.getElementById("cosmo-slide");
     let currentIndex = 0;
-    let errorCount = 0;
 
     function showNextImage() {
-        // Assegna l'evento ONLOAD PRIMA di cambiare la sorgente per evitare la "race condition"
+        // Assegna l'evento ONLOAD prima di cambiare il src
         imgElement.onload = () => {
-            errorCount = 0; // Resetta gli errori se carica con successo
             imgElement.style.opacity = 1;
         };
 
-        // Gestione errori per evitare loop infiniti
+        // Se per caso un URL è sbagliato o rimosso in futuro, salta alla prossima
         imgElement.onerror = () => {
-            errorCount++;
-            if (errorCount < imageUrls.length) {
-                currentIndex = (currentIndex + 1) % imageUrls.length;
-                showNextImage();
-            } else {
-                console.error("Tutte le immagini sembrano essere irraggiungibili.");
-            }
+            console.warn("Immagine non trovata:", imageUrls[currentIndex]);
+            currentIndex = (currentIndex + 1) % imageUrls.length;
+            showNextImage();
         };
 
-        // Ora carica l'immagine
         imgElement.src = imageUrls[currentIndex];
     }
 
     function triggerTransition() {
-        imgElement.style.opacity = 0; // Inizia la dissolvenza (fade-out)
+        // Avvia la transizione a opacità 0
+        imgElement.style.opacity = 0; 
         
-        // Aspetta che l'immagine sparisca prima di caricare la successiva
+        // Aspetta che sfumi (1 secondo, in base al CSS), poi carica la successiva
         setTimeout(() => {
             currentIndex = (currentIndex + 1) % imageUrls.length;
             showNextImage(); 
         }, 1000); 
     }
 
-    // Fai partire la prima immagine
+    // Inizializza la primissima immagine
     showNextImage();
 
-    // Cambia immagine ogni 4 secondi
+    // Loop ogni 4 secondi
     setInterval(triggerTransition, 4000);
 });
 </script>
