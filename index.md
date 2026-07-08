@@ -39,71 +39,55 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", async function() {
-    // Punta solo ed esclusivamente alle tue cartelle GitHub
-    const apiBase = "https://api.github.com/repos/cosmo-edu-lab/cosmo-edu-lab/contents/App";
-    const folders = ["cluster_img", "galaxy_img"];
-    let imageUrls = [];
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // MAGIA DI GITHUB PAGES: Questo codice dice al server di cercare fisicamente 
+    // i file nelle tue due cartelle e inserirli nell'elenco durante la pubblicazione.
+    // Nessuna chiamata API esterna, impossibile che venga bloccato!
+    let imageUrls = [
+        {% for file in site.static_files %}
+            {% if file.path contains 'App/cluster_img/' or file.path contains 'App/galaxy_img/' %}
+                "{{ file.path | relative_url }}",
+            {% endif %}
+        {% endfor %}
+    ];
 
-    try {
-        // 1. Scarica i link delle immagini
-        for (const folder of folders) {
-            const response = await fetch(`${apiBase}/${folder}`);
-            if (response.ok) {
-                const data = await response.json();
-                const images = data
-                    .filter(file => file.name.match(/\.(jpg|jpeg|png|gif|webp)$/i))
-                    .map(file => file.download_url);
-                imageUrls = imageUrls.concat(images);
-            }
-        }
+    // Rimuove eventuali righe vuote per sicurezza
+    imageUrls = imageUrls.filter(url => url.trim() !== "");
 
-        // Se le cartelle sono vuote o c'è un blocco API
-        if (imageUrls.length === 0) {
-            document.getElementById("loading-text").innerText = "Nessuna immagine trovata in App/cluster_img o App/galaxy_img";
-            return;
-        }
-
-        // Togli la scritta di caricamento
-        document.getElementById("loading-text").style.display = "none";
-
-        // Mescola l'ordine
-        imageUrls.sort(() => 0.5 - Math.random());
-
-        const imgElement = document.getElementById("cosmo-slide");
-        let currentIndex = 0;
-
-        // 2. Anima e scambia l'immagine in modo sicuro a prova di bug
-        function changeImage() {
-            // Sfuma diventando trasparente (mostrando lo sfondo nero)
-            imgElement.style.opacity = 0; 
-            
-            // Aspetta che la sfumatura finisca (1 secondo)
-            setTimeout(() => {
-                // Cambia il link dell'immagine col nuovo dal tuo GitHub
-                imgElement.src = imageUrls[currentIndex];
-                
-                // Attende una frazione di secondo per il caricamento, poi riaccende l'opacità
-                setTimeout(() => {
-                    imgElement.style.opacity = 1;
-                }, 100);
-                
-                // Prepara il numero della prossima foto
-                currentIndex = (currentIndex + 1) % imageUrls.length;
-            }, 1000); 
-        }
-
-        // Mostra immediatamente la primissima foto senza aspettare
-        imgElement.src = imageUrls[currentIndex];
-        setTimeout(() => { imgElement.style.opacity = 1; }, 100);
-        currentIndex = (currentIndex + 1) % imageUrls.length;
-
-        // Fai scorrere le immagini ogni 4 secondi
-        setInterval(changeImage, 4000);
-
-    } catch (error) {
-        console.error("Errore caricamento:", error);
-        document.getElementById("loading-text").innerText = "Si è verificato un errore di connessione.";
+    if (imageUrls.length === 0) {
+        document.getElementById("loading-text").innerText = "In attesa delle immagini. Se le hai appena caricate, attendi 1 minuto che GitHub aggiorni il sito.";
+        return;
     }
+
+    // Nascondi la scritta di caricamento
+    document.getElementById("loading-text").style.display = "none";
+
+    // Mescola l'ordine casualmente
+    imageUrls.sort(() => 0.5 - Math.random());
+
+    const imgElement = document.getElementById("cosmo-slide");
+    let currentIndex = 0;
+
+    function changeImage() {
+        imgElement.style.opacity = 0; 
+        
+        setTimeout(() => {
+            imgElement.src = imageUrls[currentIndex];
+            setTimeout(() => {
+                imgElement.style.opacity = 1;
+            }, 100);
+            
+            currentIndex = (currentIndex + 1) % imageUrls.length;
+        }, 1000); 
+    }
+
+    // Inizializza la prima immagine istantaneamente
+    imgElement.src = imageUrls[currentIndex];
+    setTimeout(() => { imgElement.style.opacity = 1; }, 100);
+    currentIndex = (currentIndex + 1) % imageUrls.length;
+
+    // Cambia immagine regolarmente
+    setInterval(changeImage, 4000);
 });
 </script>
