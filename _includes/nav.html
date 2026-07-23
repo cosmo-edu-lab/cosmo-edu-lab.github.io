@@ -7,17 +7,10 @@
     </button>
 
     <nav class="nav-links" id="navLinks">
-      {% assign has_didactical_materials = false %}
       {% for item in site.nav %}
-        {% if item.url == '/didactical-materials/' %}
-          {% assign has_didactical_materials = true %}
-        {% endif %}
         {% assign item_path = item.url | relative_url %}
         <a href="{{ item_path }}"{% if page.url == item.url %} class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
       {% endfor %}
-      {% unless has_didactical_materials %}
-        <a href="{{ '/didactical-materials/' | relative_url }}"{% if page.url == '/didactical-materials/' %} class="active" aria-current="page"{% endif %}>Didactical Materials</a>
-      {% endunless %}
     </nav>
   </div>
 </header>
