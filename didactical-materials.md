@@ -7,7 +7,7 @@ description: "Classroom-ready didactical materials and activity templates for co
 
 This page collects reusable didactical material for classroom activities.
 
-Replace the placeholders below with your final content.
+<!-- Replace the placeholders below with your final content.
 
 ## Material Template
 
@@ -68,4 +68,4 @@ By the end of this activity, students will be able to:
 - App module: [module name]
 - Download pack: [link]
 
-Short description: [2-3 lines describing what students do and learn].
+Short description: [2-3 lines describing what students do and learn]. -->
