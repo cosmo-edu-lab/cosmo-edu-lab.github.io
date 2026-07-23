@@ -11,6 +11,8 @@ github_repo: "https://github.com/cosmo-edu-lab"
 contact_email: "info@cosmo-edu-lab.org"
 license_url: "https://creativecommons.org/licenses/by/4.0/"
 license_name: "CC BY 4.0"
+  - title: "Didactical Materials"
+    url: "/didactical-materials/"
 
 # ── Top navigation (edit here to add/remove/reorder pages) ────
 nav:
@@ -20,6 +22,8 @@ nav:
     url: "/approach/"
   - title: "App"
     url: "/app/"
+  - title: "Didactical Materials"
+    url: "/didactical-materials/"
   - title: "Team"
     url: "/team/"
   - title: "Acknowledgments"
