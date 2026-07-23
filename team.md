@@ -27,6 +27,7 @@ Cosmo-Edu-Lab was born as an academic project, building on the collaboration bet
 - [Isabella Canossi](mailto:icanossi65@gmail.com) — Secondary School "Wiligelmo", Modena
 - [Marco Parmiggiani](marco.parmiggiani@liceotassoni.edu.it ) — Secondary School "Tassoni", Modena
 - [Enrico Artioli](mailto:artioli.enrico@tiscali.it) — Civico Planetario "Martini", Modena
+- [Francesca Gherbelli](mailto:francesca.gherpelli@gmail.com) — Civico Planetario "Martini", Modena
 
 </div>
 </div>
