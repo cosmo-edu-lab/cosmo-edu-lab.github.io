@@ -20,7 +20,7 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 
 - **[About the project]({{ '/about/' | relative_url }})** What Cosmo-Edu-Lab is and why it exists.
 - **[Our approach]({{ '/approach/' | relative_url }})** The commitments behind the project.
-- **[The app]({{ '/app/' | relative_url }})** Download the platform and explore its features.
+- **[The app]({{ '/app/' | relative_url }})** Download the platform or access it online.
 - **[Teaching materials]({{ '/didactical_materials/' | relative_url }})** Check out teaching units and supporting materials.
 {: .grid}
 
