@@ -7,21 +7,13 @@ description: "Funding and support."
 # image_alt: "The Cosmo-Edu-Lab team"
 ---
 
-<div class="columns" markdown="1">
-<div markdown="1">
+- ### Institutions
 
-### Institutions
+	Cosmo-Edu-Lab was born as an academic project, withing the [Graduate School in Physics and Nanoscience](https://www.nano-phdschool.unimore.it) at the University of Modena and Reggio Emilia.
 
-Cosmo-Edu-Lab was born as an academic project, withing the [Graduate School in Physics and Nanoscience](https://www.nano-phdschool.unimore.it) at the University of Modena and Reggio Emilia.
+	Several schools and public institutions collaborate with their representatives (See the [team]({{ '/team/' | relative_url }})).
 
-Several schools and public institutions collaborate with their representatives (See the [team]({{ '/team/' | relative_url }}))
+- ### Fundings
 
-</div>
-<div markdown="1">
-
-### Fundings
-
-Financial support has been provided by University of Modena and Reggio Emilia under Grant FAR 2025-2027 "From dark matter to a bright school: an interdisciplinary educational pathway through cosmology"
-
-</div>
-</div>
+	Financial support has been provided by University of Modena and Reggio Emilia under Grant FAR 2025-2027 "From dark matter to a bright school: an interdisciplinary educational pathway through cosmology".
+{: .columns}
