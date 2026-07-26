@@ -200,6 +200,17 @@ hr {
 .grid li p:last-child { margin-bottom: 0; }
 .grid li strong { display: block; margin-bottom: 0.3rem; font-size: 1rem; }
 
+/* Fixed 3-card row variant (used on home quick links) */
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 900px) {
+  .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .grid-3 { grid-template-columns: 1fr; }
+}
+
 /* ── TWO-COLUMN LIST (used via {: .columns} on a list of links) ── */
 .columns {
   display: grid;
