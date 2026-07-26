@@ -7,11 +7,12 @@ description: "The three commitments behind Cosmo-Edu-Lab's educational materials
 # image_alt: "Students analysing data on a tablet"
 ---
 
-<!-- right-aligned image beside text-->
-![Image of a plot during data manipulation]({{ '/assets/images/immagine_istogramma.jpg' | relative_url }} "Image of a plot during data manipulation"){: .float-right}
 Cosmo-Edu-Lab is designed following strict commitments:
 
 ### 1. Integrated into the school curriculum
+
+<!-- right-aligned image beside text-->
+![Image of a plot during data manipulation]({{ '/assets/images/immagine_istogramma.jpg' | relative_url }} "Image of a plot during data manipulation"){: .float-right}
 
 Materials are written for secondary school classrooms with a standard physics or science background and elementary formalism. Not yet familiar astronomical and cosmological objects, length scales, observational instruments, and the historical context are introduced through interactive, gamified activities.
 
