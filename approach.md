@@ -14,14 +14,17 @@ Cosmo-Edu-Lab is designed following strict commitments:
 ![Image of a plot during data manipulation]({{ '/assets/images/immagine_istogramma.jpg' | relative_url }} "Image of a plot during data manipulation"){: .float-right} Materials are written for secondary school classrooms with a standard physics or science background and elementary formalism. Not yet familiar astronomical and cosmological objects, length scales, observational instruments, and the historical context are introduced through interactive, gamified activities. 
 
 ### 2. An inquiry-based approach
+{: .no-float-clear}
 
 We aim to engage students in the process of scientific discovery, encouraging them to ask questions, formulate hypotheses, and draw conclusions from evidence.
 
 ### 3. Real observational data on a digital platform
+{: .no-float-clear}
 
 We use real astronomical datasets. Students are guided to analyse data according to their curriculum knowledge and extract quantitative predictions. Our digital platform lets students explore the universe in a hands-on way.
 
 ### 4. Accessiblity
+{: .no-float-clear}
 
 Being oriented to data analysis, our activities put particular attention to visually impared students. We not only carefully use technological standards, but also make use of sonification techniques and alternative activities for maximal accessibility.  
 

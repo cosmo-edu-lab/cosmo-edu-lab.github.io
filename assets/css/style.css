@@ -160,6 +160,30 @@ hr {
 }
 .hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; }
 
+.home-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 0 0 1.6rem;
+  list-style: none;
+  padding: 0;
+}
+.home-gallery li { margin: 0; }
+.home-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+@media (max-width: 900px) {
+  .home-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .home-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* ── BUTTONS ── */
 .btn {
   display: inline-block;
@@ -246,6 +270,9 @@ hr {
 
 /* clearfix so floated images don't bleed into the next heading/section */
 h2, h3, .grid, .columns, .panel, hr { clear: both; }
+
+/* Opt-out for pages/sections where heading flow should ignore float height. */
+.no-float-clear { clear: none; }
 
 @media (max-width: 640px) {
   .float-left, .float-right {
