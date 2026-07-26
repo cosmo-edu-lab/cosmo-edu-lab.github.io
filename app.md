@@ -25,6 +25,7 @@ Designed to be used in class or independently, with content suited to high schoo
     * *Local version:* Download the .zip, unzip the folder, open the .exe
       (click "Run Anyway" if prompted by protection systems).
     * *Online version:* Click the "Online version" link above.
+  
 **2. Authentication**
     * Register a new user (create an account with username and password) to login.
 
