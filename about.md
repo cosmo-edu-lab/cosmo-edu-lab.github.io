@@ -8,7 +8,7 @@ description: "What Cosmo-Edu-Lab is and why modern cosmology belongs in the high
 ---
 
 <!-- right-aligned image beside text-->
-![The Milky Way, our home galaxy]({{ '/assets/images/Milky_Way.jpg' | relative_url }}){: .float-right}
+![The Milky Way, our home galaxy]({{ '/assets/images/Milky_Way.jpg' | relative_url }} "The Milky Way, our home galaxy"){: .float-right}
 
 Modern cosmology is one of humanity's greatest intellectual achievements — yet it rarely finds its way into secondary school science. Cosmo-Edu-Lab is an open educational project making selected concepts in cosmology accessible and engaging, allowing students to connect familiar physics tools with the frontiers of science.
 

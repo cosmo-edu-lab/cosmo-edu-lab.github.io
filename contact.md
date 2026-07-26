@@ -7,6 +7,9 @@ description: "Get involved with Cosmo-Edu-Lab — browse the materials, contribu
 # image_alt: "Get in touch"
 ---
 
+<!-- right-aligned image beside text-->
+![The Milky Way, our home galaxy]({{ '/assets/images/Milky_Way.jpg' | relative_url }} "The Milky Way, our home galaxy"){: .float-right}
+
 Browse our materials, contribute to the project, or get in touch if you'd like to bring Cosmo-Edu-Lab into your school.
 
 [View on GitHub]({{ site.github_repo }}){: .btn .btn-primary} [Email us](mailto:{{ site.contact_email }}){: .btn }

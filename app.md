@@ -6,7 +6,7 @@ description: "Download Cosmo-Edu-Lab, an interactive tool exploring the major th
 ---
 
 <!-- right-aligned image beside text-->
-![Snapshot from the app home page]({{ '/assets/images/immagine_app.jpg' | relative_url }}){: .float-right}
+![Snapshot from the app home page]({{ '/assets/images/immagine_app.jpg' | relative_url }} "Snapshot from the app home page"){: .float-right}
 
 An interactive tool to explore the major themes of modern cosmology — from the origin of the universe to dark matter, from cosmic expansion to the microwave background.
 
