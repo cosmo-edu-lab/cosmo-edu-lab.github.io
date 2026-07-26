@@ -6,7 +6,7 @@ description: "Download Cosmo-Edu-Lab, an interactive tool exploring the major th
 ---
 
 <!-- right-aligned image beside text-->
-![The Milky Way, our home galaxy]({{ '/assets/images/Milky_Way.jpg' | relative_url }}){: .float-right}
+![Snapshot from the app home page]({{ '/assets/images/immagine_app.jpg' | relative_url }}){: .float-right}
 
 An interactive tool to explore the major themes of modern cosmology — from the origin of the universe to dark matter, from cosmic expansion to the microwave background.
 

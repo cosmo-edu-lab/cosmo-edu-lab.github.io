@@ -7,6 +7,8 @@ description: "The three commitments behind Cosmo-Edu-Lab's educational materials
 # image_alt: "Students analysing data on a tablet"
 ---
 
+<!-- right-aligned image beside text-->
+![Image of a plot during data manipulation]({{ '/assets/images/immagine_istrogramma.jpg' | relative_url }}){: .float-right}
 Cosmo-Edu-Lab is designed following strict commitments:
 
 ### 1. Integrated into the school curriculum

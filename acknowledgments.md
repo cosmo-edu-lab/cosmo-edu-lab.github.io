@@ -14,7 +14,7 @@ description: "Funding and support."
 
 Cosmo-Edu-Lab was born as an academic project, withing the [Graduate School in Physics and Nanoscience](https://www.nano-phdschool.unimore.it) at the University of Modena and Reggio Emilia.
 
-Several schools and public institutions collaborate with their representatives (See the [/team/](Team))
+Several schools and public institutions collaborate with their representatives (See the [team]{{ '/team/' | relative_url }}
 
 </div>
 <div markdown="1">
