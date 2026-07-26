@@ -14,7 +14,7 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 * **The project** makes selected concepts in cosmology — from dark matter to inflation — accessible and engaging, allowing students to connect familiar physics tools with the frontiers of science.
 * **The digital platform** where all concepts are deployed in interactive activities based on real data.
 
-<div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: stretch; margin-top: 3rem;" markdown="1">
+<!-- <div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: stretch; margin-top: 3rem;" markdown="1"> -->
 
 <div class="hero-actions" markdown="1" style="flex: 1; min-width: 280px; margin: 0;">
 
@@ -25,5 +25,5 @@ description: "Cosmo-Edu-Lab brings modern cosmology into the high school curricu
 
 </div>
 
-</div>
+<!-- </div> -->
 </div>
