@@ -10,9 +10,7 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo-data"
 end
 
-# Optional file-watching helper on older Windows Ruby builds.
-# Jekyll can run without it, and current RubyInstaller UCRT builds may fail to compile it.
-# gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # Lock `http_parser.rb` for Windows, JRuby builds
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]

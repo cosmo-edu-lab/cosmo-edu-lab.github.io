@@ -5,6 +5,9 @@ permalink: /didactical-materials/
 description: "Classroom-ready didactical materials and activity templates for cosmology topics."
 ---
 
+<!-- right-aligned image beside text-->
+![The Milky Way, our home galaxy]({{ '/assets/images/Milky_Way.jpg' | relative_url }}){: .float-right}
+
 This page collects reusable didactical material for classroom activities.
 
 <!-- Replace the placeholders below with your final content.
