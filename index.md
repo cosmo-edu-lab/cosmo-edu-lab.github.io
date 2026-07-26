@@ -19,8 +19,9 @@ Cosmo-Edu-Lab is an educational project which brings modern cosmology, one of hu
 - ![a globular cluster]({{ '/assets/images/globular_cluster.jpg' | relative_url }} "a globular cluster"){: loading="lazy" decoding="async"}
 {: .home-gallery}
 
-* **The project** makes selected concepts in cosmology — from dark matter to inflation — accessible and engaging, allowing students to connect familiar physics tools with the frontiers of science.
-* **The digital platform** where all concepts are deployed in interactive activities based on real data.
+**The project** makes selected concepts in cosmology — from dark matter to inflation — accessible and engaging, allowing students to connect familiar physics tools with the frontiers of science.
+
+**The digital platform** where all concepts are deployed in interactive activities based on real data.
 
 - **[Our approach]({{ '/approach/' | relative_url }})** The commitments behind the project.
 - **[The app]({{ '/app/' | relative_url }})** Download the platform or access it online.
