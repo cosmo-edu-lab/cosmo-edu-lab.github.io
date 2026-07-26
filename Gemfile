@@ -10,7 +10,9 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo-data"
 end
 
-gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+# Optional Windows file-watcher optimization; disabled because this Ruby toolchain
+# cannot compile wdm 0.1.1 (build still works without it).
+# gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # Lock `http_parser.rb` for Windows, JRuby builds
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
