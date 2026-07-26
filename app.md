@@ -21,18 +21,18 @@ Designed to be used in class or independently, with content suited to high schoo
 
 ## Instructions
 
-* **1. Accessing the App**
+**1. Accessing the App**
     * *Local version:* Download the .zip, unzip the folder, open the .exe
       (click "Run Anyway" if prompted by protection systems).
     * *Online version:* Click the "Online version" link above.
-* **2. Authentication**
+**2. Authentication**
     * Register a new user (create an account with username and password) to login.
 
 ## Features
-* **Simulations** — visualise cosmological processes interactively.
-* **Real data** — work with data from actual astronomical observations.
-* **Classroom-ready** — structured learning paths with clear objectives.
-* **Verified content** — developed and reviewed by university researchers.
+**Simulations** — visualise cosmological processes interactively.
+**Real data** — work with data from actual astronomical observations.
+**Classroom-ready** — structured learning paths with clear objectives.
+**Verified content** — developed and reviewed by university researchers.
   
 ## User Guide
 For further information about the contents and usability: [User Guide](https://github.com/cosmo-edu-lab/cosmo-edu-lab/releases/download/v1.0/User_Guide.pdf){: .btn}

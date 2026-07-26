@@ -11,15 +11,15 @@ Cosmo-Edu-Lab was born as an academic project, building on the collaboration bet
 
 - ### Academic Staff
 
-	- [Enrico Bertuzzo](https://unimore.unifind.cineca.it/resource/person/205539) — University of Modena and Reggio Emilia
-	- [Guido Goldoni](https://unimore.unifind.cineca.it/get/person/014623) — University of Modena and Reggio Emilia
-	- [Eugenio Tufino](https://unimore.unifind.cineca.it/resource/person/283299) — University of Modena and Reggio Emilia
-	- [Eleonora Panini](mailto:eleonora.panini@unimore.it) — University of Modena and Reggio Emilia
+	[Enrico Bertuzzo](https://unimore.unifind.cineca.it/resource/person/205539) — University of Modena and Reggio Emilia
+	[Guido Goldoni](https://unimore.unifind.cineca.it/get/person/014623) — University of Modena and Reggio Emilia
+	[Eugenio Tufino](https://unimore.unifind.cineca.it/resource/person/283299) — University of Modena and Reggio Emilia
+	[Eleonora Panini](mailto:eleonora.panini@unimore.it) — University of Modena and Reggio Emilia
 
 - ### Collaborators
 
-	- [Isabella Canossi](mailto:icanossi65@gmail.com) — Secondary School "Wiligelmo", Modena
-	- [Marco Parmiggiani](mailto:marco.parmiggiani@liceotassoni.edu.it) — Secondary School "Tassoni", Modena
-	- [Enrico Artioli](mailto:artioli.enrico@tiscali.it) — Civico Planetario "Martini", Modena
-	- [Francesca Gherbelli](mailto:francesca.gherpelli@gmail.com) — Civico Planetario "Martini", Modena
+	[Isabella Canossi](mailto:icanossi65@gmail.com) — Secondary School "Wiligelmo", Modena
+	[Marco Parmiggiani](mailto:marco.parmiggiani@liceotassoni.edu.it) — Secondary School "Tassoni", Modena
+	[Enrico Artioli](mailto:artioli.enrico@tiscali.it) — Civico Planetario "Martini", Modena
+	[Francesca Gherbelli](mailto:francesca.gherpelli@gmail.com) — Civico Planetario "Martini", Modena
 {: .columns}
