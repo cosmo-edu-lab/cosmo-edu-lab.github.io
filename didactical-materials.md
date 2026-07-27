@@ -10,6 +10,7 @@ description: "Classroom-ready didactical materials and activity templates for co
 This page collects downloadable didactical material for classroom activities. 
 
 ### Page under construction
+{: .no-float-clear}
 
 <!-- Replace the placeholders below with your final content.
 

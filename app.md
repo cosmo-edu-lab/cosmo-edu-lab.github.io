@@ -13,9 +13,9 @@ It is designed to be used in class or independently, with content suited to high
 
 ## Current release
 
-*Introduction to cosmology* Several gamified, interactive activities to become familiar with astronomical legthscales and objects, from planets to galaxies and beyond, the evolution of the cosmo, and to learn about the historical path of human discoveries and the instruments which made it possible. It can be used to acquaint students with possibly unfamiliar topics as well as a contribute in public engagement initiatives.
+*1 - Introduction to cosmology* Gamified, interactive activities to familiarize with astronomical legthscales and objects, the evolution of the cosmo, and learn about the path of human discoveries and the instruments which made it possible. Use to acquaint students with unfamiliar topics or to contribute in public engagement initiatives.
 
-*Dark matter* A set of scaffolded interactive activities, based on real observational data on individual galaxies or galasy clusters, to induce the existence and quantify the amount of dark matter in the Universe, using standard mathematical tools of secondary school curriculum. The activites can be carried on individually or in small groups. See our tested [didactical materials]({{ '/didactical-materials/' | relative_url }}) for hints on how to use the app in the classroom.
+*Dark matter* Scaffolded interactive activities, based on real observational data on individual galaxies or galasy clusters, to induce the existence and quantify the amount of dark matter in the Universe, using standard mathematical tools. The activites can be carried on individually or in small groups. See our tested [didactical materials]({{ '/didactical-materials/' | relative_url }}) on how to use the app in the classroom.
 
 ## Download & Access
 
