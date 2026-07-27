@@ -13,4 +13,4 @@ Modern cosmology is one of humanity's greatest intellectual achievements — yet
 
 Our approach merges real observational data with an inquiry-based educational method, using familiar curriculum-based tools, enabling students to "do" cosmology rather than simply read about it. All activities are framed within a freely available digital platform, allowing students to explore the universe in a hands-on way.
 
-Cosmo-Edu-Lab was born as an academic project, building on the collaboration between university research and school practice — see [the team]({{ '/team/' | relative_url }}) behind it, read about [our approach]({{ '/approach/' | relative_url }}) in more detail, and [download the App]({{ '/app/' | relative_url }}) to start working.
+Cosmo-Edu-Lab was born as an academic project, building on the collaboration between university research and school practice — see [the team]({{ '/team/' | relative_url }}) behind it, read about [our approach]({{ '/approach/' | relative_url }}) in more detail, and [download the app]({{ '/app/' | relative_url }}) to start playing.
