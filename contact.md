@@ -9,11 +9,10 @@ description: "Get involved with Cosmo-Edu-Lab — browse the materials, contribu
 
 ![The Milky Way, our home galaxy]({{ '/assets/images/Milky_Way.jpg' | relative_url }} "The Milky Way, our home galaxy"){: .float-right}
 
-We would be happy to hear from you.
-
-- **Browse our materials** and get in touch for questions or suggestions.
-- **Propose yourself as a contributor** if you work in a related field.
-- **Bring Cosmo-Edu-Lab into your classroom**, and we'll list your institution here.
-- **Use Cosmo-Edu-Lab for public engagement**, we would be happy to hear about your experience.
-
+We would be happy to hear from you at 
 [Email us at guido.goldoni@unimore.it](mailto:guido.goldoni@unimore.it){: .btn }
+
+- *Browse our materials* and get in touch for questions or suggestions.
+- *Propose yourself as a contributor* if you work in a related field.
+- *Bring Cosmo-Edu-Lab into your classroom*, and we'll list your institution here.
+- *Use Cosmo-Edu-Lab for public engagement*, we would be happy to hear about your experience.

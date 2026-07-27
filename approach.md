@@ -31,4 +31,4 @@ We use real astronomical datasets. Students are guided to analyse data according
 
 Being oriented to data analysis, our activities put particular attention to visually impared students. We not only carefully use technological standards, but also make use of sonification techniques and alternative activities for maximal accessibility.  
 
-Curious what this looks like in practice? Take a look at [the app]({{ '/app/' | relative_url }}).
+Our approach is deployed in the scaffoled activities implemented in [the app]({{ '/app/' | relative_url }}).
