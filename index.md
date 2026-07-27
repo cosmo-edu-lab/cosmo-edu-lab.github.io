@@ -16,8 +16,8 @@ Cosmo-Edu-Lab is an educational project which brings modern cosmology, one of hu
 - ![spiral galaxy NGC1300]({{ '/assets/images/NGC1300_spiral.jpg' | relative_url }} "spiral galaxy NGC1300"){: loading="lazy" decoding="async"}
 - ![an elliptical galaxy]({{ '/assets/images/elliptical_galaxy.jpg' | relative_url }} "an elliptical galaxy"){: loading="lazy" decoding="async"}
 - ![a galaxy cluster]({{ '/assets/images/galaxy_cluster.jpg' | relative_url }} "a galaxy cluster"){: loading="lazy" decoding="async"}
-- ![a globular cluster]({{ '/assets/images/globular_cluster.jpg' | relative_url }} "a globular cluster"){: loading="lazy" decoding="async"}
-{: .home-gallery}
+- ![a nebula]({{ '/assets/images/nebula_dark.jpg' | relative_url }} "a nebula"){: loading="lazy" decoding="async"}
+{: .home-gallery} 
 
 **The project** makes selected concepts in cosmology — from dark matter to inflation — accessible and engaging, allowing students to connect familiar physics tools with the frontiers of science.
 
