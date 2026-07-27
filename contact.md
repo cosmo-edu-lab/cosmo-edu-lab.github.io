@@ -11,9 +11,9 @@ description: "Get involved with Cosmo-Edu-Lab — browse the materials, contribu
 
 We would be happy to hear from you.
 
-- ***Browse our materials*** and get in touch for questions or suggestions.
-- ***Propose yourself as a contributor*** if you work in a related field.
-- ***Bring Cosmo-Edu-Lab into your classroom***, and we'll list your institution here.
-- ***Use Cosmo-Edu-Lab for public engagement***, we would be happy to hear about your experience.
+- **Browse our materials** and get in touch for questions or suggestions.
+- **Propose yourself as a contributor** if you work in a related field.
+- **Bring Cosmo-Edu-Lab into your classroom**, and we'll list your institution here.
+- **Use Cosmo-Edu-Lab for public engagement**, we would be happy to hear about your experience.
 
-[Email us at guido.goldoni@unimore.it](mailto:{{ mailto:guido.goldoni@unimore.it }}){: .btn }
+[Email us at guido.goldoni@unimore.it](mailto:guido.goldoni@unimore.it){: .btn }
