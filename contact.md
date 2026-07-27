@@ -9,6 +9,14 @@ description: "Get involved with Cosmo-Edu-Lab — browse the materials, contribu
 
 ![The Milky Way, our home galaxy]({{ '/assets/images/Milky_Way.jpg' | relative_url }} "The Milky Way, our home galaxy"){: .float-right}
 
-Browse our materials, contribute to the project, or get in touch if you'd like to bring Cosmo-Edu-Lab into your school.
+We would  be happy to hear from you. 
 
-[View on GitHub]({{ site.github_repo }}){: .btn .btn-primary} [Email us](mailto:{{ site.contact_email }}){: .btn }
+*Browse our materials* and get in touch for questions or suggestions
+
+*Propose yourself to contribute* if you work in a close field
+
+*Bring Cosmo-Edu-Lab into your classroom*, we'll list your institution here.
+
+*Use Cosmo-Edu-Lab for public engagment*, we would be happy to hear and tell us about your experience.
+
+[Email us at guido.goldoni@unimore.it](mailto:{{ mailto:guido.goldoni@unimore.it }}){: .btn }

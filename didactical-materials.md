@@ -7,7 +7,9 @@ description: "Classroom-ready didactical materials and activity templates for co
 
 ![The Milky Way, our home galaxy]({{ '/assets/images/Milky_Way.jpg' | relative_url }} "The Milky Way, our home galaxy"){: .float-right}
 
-This page collects `downloadable` didactical material for classroom activities.
+This page collects downloadable didactical material for classroom activities. 
+
+*** Page under construction ***
 
 <!-- Replace the placeholders below with your final content.
 

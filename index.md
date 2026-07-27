@@ -21,9 +21,19 @@ Cosmo-Edu-Lab is an educational project which brings modern cosmology, one of hu
 
 **The project** makes selected concepts in cosmology — from dark matter to inflation — accessible and engaging, allowing students to connect familiar physics tools with the frontiers of science.
 
-**The digital platform** is the digital space with interactive activities to manipulate and intepret real data.
+**A digital platform** provides a digital space with scaffolded interactive activities where students manipulate and intepret real data.
+
+## Features
+
+**Simulations** — visualise cosmological processes interactively
+
+**Real data** — work with data from actual astronomical observations
+
+**Classroom-ready** — structured learning paths with clear objectives
+
+**Verified content** — developed and reviewed by university researchers
 
 - **[Our approach]({{ '/approach/' | relative_url }})** See the commitments behind the project.
-- **[The app]({{ '/app/' | relative_url }})** Download the digital platform or access it online.
+- **[The App]({{ '/app/' | relative_url }})** Download our digital platform or access it online.
 - **[Teaching materials]({{ '/didactical-materials/' | relative_url }})** Check out teaching units and supporting materials.
 {: .grid .grid-3}
