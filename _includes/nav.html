@@ -1,6 +1,8 @@
 <header class="site-nav">
   <div class="nav-inner">
-    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}">
+      <img class="brand-logo" src="{{ '/assets/images/CosmoEduLabLogo.png' | relative_url }}" alt="{{ site.title }}">
+    </a>
 
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>

@@ -74,11 +74,15 @@ hr {
   justify-content: space-between;
 }
 .brand {
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--text);
+  display: flex;
+  align-items: center;
 }
-.brand:hover { text-decoration: none; color: var(--accent); }
+.brand:hover { text-decoration: none; }
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 42px;
+}
 
 .nav-links { display: flex; gap: 1.5rem; }
 .nav-links a {
