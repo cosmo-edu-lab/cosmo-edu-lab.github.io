@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Didactical Materials
+title: Teaching Materials
 permalink: /didactical-materials/
 description: "Classroom-ready didactical materials and activity templates for cosmology topics."
 ---

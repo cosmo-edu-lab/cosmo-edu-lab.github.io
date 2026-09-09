@@ -82,14 +82,14 @@ hr {
 .brand-logo {
   display: block;
   width: auto;
-  height: 90px;
+  height: 72px;
   flex-shrink: 0;
 }
 .brand-logo-uni {
-  height: 70px;
+  height: 56px;
 }
 
-.nav-links { display: flex; gap: 1.5rem; }
+.nav-links { display: flex; gap: 1.5rem; margin-left: 2rem; }
 .nav-links a {
   color: var(--text-muted);
   font-size: 0.95rem;
@@ -117,13 +117,14 @@ hr {
 
 @media (max-width: 640px) {
   .nav-toggle { display: flex; }
-  .brand-logo { height: 55px; }
-  .brand-logo-uni { height: 42px; }
+  .brand-logo { height: 48px; }
+  .brand-logo-uni { height: 38px; }
   .nav-links {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
+    margin-left: 0;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
