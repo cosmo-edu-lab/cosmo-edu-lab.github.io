@@ -82,10 +82,11 @@ hr {
 .brand-logo {
   display: block;
   width: auto;
-  height: 120px;
+  height: 90px;
+  flex-shrink: 0;
 }
 .brand-logo-uni {
-  height: 90px;
+  height: 70px;
 }
 
 .nav-links { display: flex; gap: 1.5rem; }
@@ -116,8 +117,8 @@ hr {
 
 @media (max-width: 640px) {
   .nav-toggle { display: flex; }
-  .brand-logo { height: 70px; }
-  .brand-logo-uni { height: 55px; }
+  .brand-logo { height: 55px; }
+  .brand-logo-uni { height: 42px; }
   .nav-links {
     position: absolute;
     top: 100%;
