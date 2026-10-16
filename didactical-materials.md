@@ -12,9 +12,9 @@ This page collects downloadable didactical material for classroom activities.
 ### Page under construction
 {: .no-float-clear}
 
-* 📄 [AstroNotes (PDF)]({{ '/assets/images/Astrophysics_Notes.pdf' | relative_url }}){: target="_blank"}
-* 📄 [CosmoNotes (PDF)]({{ '/assets/images/Cosmology_Notes.pdf' | relative_url }}){: target="_blank"}
-* 📄 [Dark Matter Physics (PDF)]({{ '/assets/images/Dark_matter.pdf' | relative_url }}){: target="_blank"}
+* 📄 [AstroNotes (PDF)]({{ '/assets/images/Astrophysics_Notes.pdf' | relative_url }}){: target="_blank"}<br>
+* 📄 [CosmoNotes (PDF)]({{ '/assets/images/Cosmology_Notes.pdf' | relative_url }}){: target="_blank"}<br>
+* 📄 [Dark Matter Physics (PDF)]({{ '/assets/images/Dark_matter.pdf' | relative_url }}){: target="_blank"}<br>
 * 📄 [Dark Matter Intro (PDF)]({{ '/assets/images/cosmo_dark_matter.pdf' | relative_url }}){: target="_blank"}
 
 <!-- Replace the placeholders below with your final content.
